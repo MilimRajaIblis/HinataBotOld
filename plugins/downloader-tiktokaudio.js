@@ -27,7 +27,7 @@ let txt = `🚀 *Link:* ${await(await axios.get(`https://tinyurl.com/api-create.
   })
 }
 handler.tags = ['downloader']
-handler.command = /^(tt|tiktok)(a(udio)?|mp3|sound)(dl)?(download(er)?)?$/i
+handler.command = /^(tiktokaudio)$/i
 
 handler.limit = true
 

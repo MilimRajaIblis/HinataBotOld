@@ -35,6 +35,6 @@ if (args[1] == 'a') {
 }
 handler.help = ['tiktoknowm'].map(v => v + ' <url>')
 handler.tags = ['downloader', 'premium']
-handler.command = /^(tt|tiktok)nowm(dl)?(download(er)?)?$/i
+handler.command = /^(tiktoknowm)$/i
 handler.premium = false
 export default handler

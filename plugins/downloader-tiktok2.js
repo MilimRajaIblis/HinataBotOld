@@ -24,6 +24,6 @@ let caption = `*Nickname:* ${wm}`
 }
 handler.help = ['tiktok2'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^t(iktok(d(own(load(er)?2|2)|l2)|2)|td(own(load(er)?2|2)|l2))$/i
+handler.command = /^(tiktok2)$/i
 
 export default handler

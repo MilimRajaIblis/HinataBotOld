@@ -12,8 +12,8 @@ let name = await conn.getName(who)
       }) * 1000
     }
     let muptime = clockString(_muptime)
-    conn.sendHydrated(m.chat, `⏳ Runtime: ${muptime}`, 
-author, logo, webs, 'Website', null, null, [
+    conn.sendButton(m.chat, `⏳ Runtime: ${muptime}`, 
+author, logo, [
 [`ᴏᴡɴᴇʀ`, `${usedPrefix}owner`],
 [`ᴅᴏɴᴀᴛᴇ`, `${usedPrefix}donate`]
 ], m)

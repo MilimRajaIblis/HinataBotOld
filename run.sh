@@ -1,1 +1,7 @@
-rm -rf HinataBot && git clone https://github.com/AyGemuy/HinataBot && sudo apt install ffmpeg imagemagick -y && cd HinataBot && npm install && npm install -g pm2 && pm2 start index.js && pm2 logs
+git clone https://github.com/wudysoft/HinataBot
+cd HinataBot
+apt update -y && curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - && apt install nodejs ffmpeg imagemagick -y
+npm i -g
+npm i -g pm2
+pm2 start index.js
+pm2 logs

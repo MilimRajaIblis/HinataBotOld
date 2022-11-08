@@ -32,6 +32,7 @@ let handler = async (m, { conn, command, groupMetadata, usedPrefix: _p, __dirnam
 
      let res = JSON.parse(readFileSync('./json/emoji.json'))
      let em = res.emoji
+     let mojis = em.getRandom()
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
     let { exp, limit, level, role, money, lastclaim, lastweekly, registered, regTime, age, banned, pasangan } = global.db.data.users[who]
     let { min, xp, max } = xpRange(level, global.multiplier)
@@ -58,15 +59,15 @@ let handler = async (m, { conn, command, groupMetadata, usedPrefix: _p, __dirnam
       }
      }
      let math = max - xp
-     let ktnya = [`\n\n\n ${em.getRandom()} Hai *${name}* : \n${htjava} _Mungkin menu ini bermanfaat?_`,
- `\n\n\n ${em.getRandom()} Hai *${name}* : \n${htjava} _Terimakasih sudah menggunakan bot ini_`,
- `\n\n\n ${em.getRandom()} Hai *${name}* : \n${htjava} _Semoga gak erorr_`,
- `\n\n\n ${em.getRandom()} Hai *${name}* : \n${htjava} _Jika lama kemungkiman erorr atau delay_`,
- `\n\n\n ${em.getRandom()} Hai *${name}* : \n${htjava} _Menampilkan menu_`,
- `\n\n\n ${em.getRandom()} Hai *${name}* : \n${htjava} _Wait..._`,
- `\n\n\n ${em.getRandom()} Hai *${name}* : \n${htjava} _Dua tiga kucing berlari_`,
- `\n\n\n ${em.getRandom()} Hai *${name}* : \n${htjava} _Bentar bang akan kutampilkan menunya_`,
- `\n\n\n ${em.getRandom()} Hai *${name}* : \n${htjava} _Prosess..._`]
+     let ktnya = ["Mungkin menu ini bermanfaat?",
+ "Terimakasih sudah menggunakan bot ini",
+ "Semoga gak erorr",
+ "Jika lama kemungkiman erorr atau delay",
+ "Menampilkan menu",
+ "Wait...",
+ "Dua tiga kucing berlari",
+ "Bentar bang akan kutampilkan menunya",
+ "Prosess..."]
  let ktx = ktnya.getRandom()
      let tags
      let teks = `${args[0]}`.toLowerCase()
@@ -216,55 +217,55 @@ let handler = async (m, { conn, command, groupMetadata, usedPrefix: _p, __dirnam
    {
 	title: htki + ' MAIN ' + htka,
 	rows: [
-	    {title: `⚡ SPEED BOT`, rowId: _p + "ping", description: "Menampilkan kecepatan respon BOT"},
-	    {title: `💌 OWNER BOT`, rowId: _p + "owner", description: "Menampilkan List owner BOT"},
-	    {title: `📔 SCRIPT BOT`, rowId: _p + "sc", description: `Source Code`},
+	    {title: "⚡ SPEED BOT", rowId: _p + "ping", description: "Menampilkan kecepatan respon BOT"},
+	    {title: "💌 OWNER BOT", rowId: _p + "owner", description: "Menampilkan List owner BOT"},
+	    {title: "📔 SCRIPT BOT", rowId: _p + "sc", description: `Source Code`},
 	]
     },{
 	title: htki + ' SUPPORT ' + htka,
 	rows: [
-	    {title: `🔖 SEWA`, rowId: _p + "sewa", description: "Menampilkan list harga sewa BOT"},
-	    {title: `🌟 LIST PREMIUM`, rowId: _p + "premlist", description: "Menampilkan list harga premium"},
-	    {title: `💹 DONASI`, rowId: _p + "donasi", description: 'Support BOT agar lebih fast respon'},
+	    {title: "🔖 SEWA", rowId: _p + "sewa", description: "Menampilkan list harga sewa BOT"},
+	    {title: "🌟 LIST PREMIUM", rowId: _p + "premlist", description: "Menampilkan list harga premium"},
+	    {title: "💹 DONASI", rowId: _p + "donasi", description: 'Support BOT agar lebih fast respon'},
 	]
 	},{
 	title: htki + ' MENU ' + htka,
 	rows: [
-	{title: `${em.getRandom()} ${dmenub} Menu All Menu ${emot}`, rowId: _p + "menulist all", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Absen ${emot}`, rowId: _p + "menulist absen", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Admin ${emot}`, rowId: _p + "menulist admin", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Advanced ${emot}`, rowId: _p + "menulist advanced", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Anonymous ${emot}`, rowId: _p + "menulist anonymous", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Audio ${emot}`, rowId: _p + "menulist audio", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Baileys ${emot}`, rowId: _p + "menulist Baileys", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Database ${emot}`, rowId: _p + "menulist database", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Downloader ${emot}`, rowId: _p + "menulist downloader", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Edukasi ${emot}`, rowId: _p + "menulist edukasi", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Fun ${emot}`, rowId: _p + "menulist fun", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Game ${emot}`, rowId: _p + "menulist game", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Group ${emot}`, rowId: _p + "menulist group", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Host ${emot}`, rowId: _p + "menulist host", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Info ${emot}`, rowId: _p + "menulist info", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Internet ${emot}`, rowId: _p + "menulist internet", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Jadian ${emot}`, rowId: _p + "menulist jadian", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Jadibot ${emot}`, rowId: _p + "menulist jadibot", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Kerang ${emot}`, rowId: _p + "menulist kerang", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Main ${emot}`, rowId: _p + "menulist main", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Maker ${emot}`, rowId: _p + "menulist maker", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Nocategory ${emot}`, rowId: _p + "menulist nocategory", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Nsfw ${emot}`, rowId: _p + "menulist nsfw", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Nulis ${emot}`, rowId: _p + "menulist nulis", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Owner ${emot}`, rowId: _p + "menulist owner", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Premium ${emot}`, rowId: _p + "menulist premium", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Primbon ${emot}`, rowId: _p + "menulist primbon", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Quotes ${emot}`, rowId: _p + "menulist quotes", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Quran ${emot}`, rowId: _p + "menulist quran", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Random ${emot}`, rowId: _p + "menulist random", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu RPG ${emot}`, rowId: _p + "menulist rpg", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Sticker ${emot}`, rowId: _p + "menulist sticker", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Tools ${emot}`, rowId: _p + "menulist tools", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu Vote ${emot}`, rowId: _p + "menulist vote", description: ktx},
-	{title: `${em.getRandom()} ${dmenub} Menu XP ${emot}`, rowId: _p + "menulist xp", description: ktx}
+	{title: mojis + dmenub2 + " All Menu", rowId: _p + "menulist all", description: ktx},
+	{title: mojis + dmenub2 + " Absen", rowId: _p + "menulist absen", description: ktx},
+	{title: mojis + dmenub2 + " Admin", rowId: _p + "menulist admin", description: ktx},
+	{title: mojis + dmenub2 + " Advanced", rowId: _p + "menulist advanced", description: ktx},
+	{title: mojis + dmenub2 + " Anonymous", rowId: _p + "menulist anonymous", description: ktx},
+	{title: mojis + dmenub2 + " Audio", rowId: _p + "menulist audio", description: ktx},
+	{title: mojis + dmenub2 + " Baileys", rowId: _p + "menulist Baileys", description: ktx},
+	{title: mojis + dmenub2 + " Database", rowId: _p + "menulist database", description: ktx},
+	{title: mojis + dmenub2 + " Downloader", rowId: _p + "menulist downloader", description: ktx},
+	{title: mojis + dmenub2 + " Edukasi", rowId: _p + "menulist edukasi", description: ktx},
+	{title: mojis + dmenub2 + " Fun", rowId: _p + "menulist fun", description: ktx},
+	{title: mojis + dmenub2 + " Game", rowId: _p + "menulist game", description: ktx},
+	{title: mojis + dmenub2 + " Group", rowId: _p + "menulist group", description: ktx},
+	{title: mojis + dmenub2 + " Host", rowId: _p + "menulist host", description: ktx},
+	{title: mojis + dmenub2 + " Info", rowId: _p + "menulist info", description: ktx},
+	{title: mojis + dmenub2 + " Internet", rowId: _p + "menulist internet", description: ktx},
+	{title: mojis + dmenub2 + " Jadian", rowId: _p + "menulist jadian", description: ktx},
+	{title: mojis + dmenub2 + " Jadibot", rowId: _p + "menulist jadibot", description: ktx},
+	{title: mojis + dmenub2 + " Kerang", rowId: _p + "menulist kerang", description: ktx},
+	{title: mojis + dmenub2 + " Main", rowId: _p + "menulist main", description: ktx},
+	{title: mojis + dmenub2 + " Maker", rowId: _p + "menulist maker", description: ktx},
+	{title: mojis + dmenub2 + " Nocategory", rowId: _p + "menulist nocategory", description: ktx},
+	{title: mojis + dmenub2 + " Nsfw", rowId: _p + "menulist nsfw", description: ktx},
+	{title: mojis + dmenub2 + " Nulis", rowId: _p + "menulist nulis", description: ktx},
+	{title: mojis + dmenub2 + " Owner", rowId: _p + "menulist owner", description: ktx},
+	{title: mojis + dmenub2 + " Premium", rowId: _p + "menulist premium", description: ktx},
+	{title: mojis + dmenub2 + " Primbon", rowId: _p + "menulist primbon", description: ktx},
+	{title: mojis + dmenub2 + " Quotes", rowId: _p + "menulist quotes", description: ktx},
+	{title: mojis + dmenub2 + " Quran", rowId: _p + "menulist quran", description: ktx},
+	{title: mojis + dmenub2 + " Random", rowId: _p + "menulist random", description: ktx},
+	{title: mojis + dmenub2 + " RPG", rowId: _p + "menulist rpg", description: ktx},
+	{title: mojis + dmenub2 + " Sticker", rowId: _p + "menulist sticker", description: ktx},
+	{title: mojis + dmenub2 + " Tools", rowId: _p + "menulist tools", description: ktx},
+	{title: mojis + dmenub2 + " Vote", rowId: _p + "menulist vote", description: ktx},
+	{title: mojis + dmenub2 + " XP", rowId: _p + "menulist xp", description: ktx}
 	]
   }
 ]

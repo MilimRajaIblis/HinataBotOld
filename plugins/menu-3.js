@@ -32,7 +32,10 @@ let handler = async (m, { conn, command, groupMetadata, usedPrefix: _p, __dirnam
 
      let res = JSON.parse(readFileSync('./json/emoji.json'))
      let em = res.emoji
-     let mojis = em.getRandom()
+     let spas = "                "
+     let spas2 = "         "
+     let mojis = "╰╴"
+     let index = 0
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
     let { exp, limit, level, role, money, lastclaim, lastweekly, registered, regTime, age, banned, pasangan } = global.db.data.users[who]
     let { min, xp, max } = xpRange(level, global.multiplier)
@@ -59,15 +62,15 @@ let handler = async (m, { conn, command, groupMetadata, usedPrefix: _p, __dirnam
       }
      }
      let math = max - xp
-     let ktnya = ["Mungkin menu ini bermanfaat?",
- "Terimakasih sudah menggunakan bot ini",
- "Semoga gak erorr",
- "Jika lama kemungkiman erorr atau delay",
- "Menampilkan menu",
- "Wait...",
- "Dua tiga kucing berlari",
- "Bentar bang akan kutampilkan menunya",
- "Prosess..."]
+     let ktnya = ["Kamu nanya?",
+ "No spam...",
+ "Thanks..",
+ "Menampilkan...",
+ "Tunggu...",
+ "Proses...",
+ "Loading...",
+ "Bertanya..",
+ "Hooh..."]
  let ktx = ktnya.getRandom()
      let tags
      let teks = `${args[0]}`.toLowerCase()
@@ -215,57 +218,57 @@ let handler = async (m, { conn, command, groupMetadata, usedPrefix: _p, __dirnam
     try {
       const sections = [
    {
-	title: htki + ' MAIN ' + htka,
+	title: spas + htki + ' MAIN ' + htka,
 	rows: [
 	    {title: "⚡ SPEED BOT", rowId: _p + "ping", description: "Menampilkan kecepatan respon BOT"},
 	    {title: "💌 OWNER BOT", rowId: _p + "owner", description: "Menampilkan List owner BOT"},
 	    {title: "📔 SCRIPT BOT", rowId: _p + "sc", description: `Source Code`},
 	]
     },{
-	title: htki + ' SUPPORT ' + htka,
+	title: spas + htki + ' SUPPORT ' + htka,
 	rows: [
 	    {title: "🔖 SEWA", rowId: _p + "sewa", description: "Menampilkan list harga sewa BOT"},
 	    {title: "🌟 LIST PREMIUM", rowId: _p + "premlist", description: "Menampilkan list harga premium"},
 	    {title: "💹 DONASI", rowId: _p + "donasi", description: 'Support BOT agar lebih fast respon'},
 	]
 	},{
-	title: htki + ' MENU ' + htka,
+	title: spas + htki + ' MENU ' + htka,
 	rows: [
-	{title: mojis + dmenub2 + " All Menu", rowId: _p + "menulist all", description: ktx},
-	{title: mojis + dmenub2 + " Absen", rowId: _p + "menulist absen", description: ktx},
-	{title: mojis + dmenub2 + " Admin", rowId: _p + "menulist admin", description: ktx},
-	{title: mojis + dmenub2 + " Advanced", rowId: _p + "menulist advanced", description: ktx},
-	{title: mojis + dmenub2 + " Anonymous", rowId: _p + "menulist anonymous", description: ktx},
-	{title: mojis + dmenub2 + " Audio", rowId: _p + "menulist audio", description: ktx},
-	{title: mojis + dmenub2 + " Baileys", rowId: _p + "menulist Baileys", description: ktx},
-	{title: mojis + dmenub2 + " Database", rowId: _p + "menulist database", description: ktx},
-	{title: mojis + dmenub2 + " Downloader", rowId: _p + "menulist downloader", description: ktx},
-	{title: mojis + dmenub2 + " Edukasi", rowId: _p + "menulist edukasi", description: ktx},
-	{title: mojis + dmenub2 + " Fun", rowId: _p + "menulist fun", description: ktx},
-	{title: mojis + dmenub2 + " Game", rowId: _p + "menulist game", description: ktx},
-	{title: mojis + dmenub2 + " Group", rowId: _p + "menulist group", description: ktx},
-	{title: mojis + dmenub2 + " Host", rowId: _p + "menulist host", description: ktx},
-	{title: mojis + dmenub2 + " Info", rowId: _p + "menulist info", description: ktx},
-	{title: mojis + dmenub2 + " Internet", rowId: _p + "menulist internet", description: ktx},
-	{title: mojis + dmenub2 + " Jadian", rowId: _p + "menulist jadian", description: ktx},
-	{title: mojis + dmenub2 + " Jadibot", rowId: _p + "menulist jadibot", description: ktx},
-	{title: mojis + dmenub2 + " Kerang", rowId: _p + "menulist kerang", description: ktx},
-	{title: mojis + dmenub2 + " Main", rowId: _p + "menulist main", description: ktx},
-	{title: mojis + dmenub2 + " Maker", rowId: _p + "menulist maker", description: ktx},
-	{title: mojis + dmenub2 + " Nocategory", rowId: _p + "menulist nocategory", description: ktx},
-	{title: mojis + dmenub2 + " Nsfw", rowId: _p + "menulist nsfw", description: ktx},
-	{title: mojis + dmenub2 + " Nulis", rowId: _p + "menulist nulis", description: ktx},
-	{title: mojis + dmenub2 + " Owner", rowId: _p + "menulist owner", description: ktx},
-	{title: mojis + dmenub2 + " Premium", rowId: _p + "menulist premium", description: ktx},
-	{title: mojis + dmenub2 + " Primbon", rowId: _p + "menulist primbon", description: ktx},
-	{title: mojis + dmenub2 + " Quotes", rowId: _p + "menulist quotes", description: ktx},
-	{title: mojis + dmenub2 + " Quran", rowId: _p + "menulist quran", description: ktx},
-	{title: mojis + dmenub2 + " Random", rowId: _p + "menulist random", description: ktx},
-	{title: mojis + dmenub2 + " RPG", rowId: _p + "menulist rpg", description: ktx},
-	{title: mojis + dmenub2 + " Sticker", rowId: _p + "menulist sticker", description: ktx},
-	{title: mojis + dmenub2 + " Tools", rowId: _p + "menulist tools", description: ktx},
-	{title: mojis + dmenub2 + " Vote", rowId: _p + "menulist vote", description: ktx},
-	{title: mojis + dmenub2 + " XP", rowId: _p + "menulist xp", description: ktx}
+	{title: ++index + "." + spas + "🧧 All Menu".toUpperCase(), rowId: _p + "menulist all", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🗒️ Absen Menu".toUpperCase(), rowId: _p + "menulist absen", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🤵‍ Admin Menu".toUpperCase(), rowId: _p + "menulist admin", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🧰 Advanced Menu".toUpperCase(), rowId: _p + "menulist advanced", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🎭 Anonymous Menu".toUpperCase(), rowId: _p + "menulist anonymous", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🎙️ Audio Menu".toUpperCase(), rowId: _p + "menulist audio", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🤖 Baileys Menu".toUpperCase(), rowId: _p + "menulist Baileys", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "💾 Database Menu".toUpperCase(), rowId: _p + "menulist database", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "📥 Downloader Menu".toUpperCase(), rowId: _p + "menulist downloader", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "📔 Edukasi Menu".toUpperCase(), rowId: _p + "menulist edukasi", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🪄 Fun Menu".toUpperCase(), rowId: _p + "menulist fun", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🎮 Game Menu".toUpperCase(), rowId: _p + "menulist game", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "👨‍👩‍👦‍👦 Group Menu".toUpperCase(), rowId: _p + "menulist group", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🖥️ Host Menu".toUpperCase(), rowId: _p + "menulist host", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "ℹ️ Info Menu".toUpperCase(), rowId: _p + "menulist info", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "📡 Internet Menu".toUpperCase(), rowId: _p + "menulist internet", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "💌 Jadian Menu".toUpperCase(), rowId: _p + "menulist jadian", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🗝️ Jadibot Menu".toUpperCase(), rowId: _p + "menulist jadibot", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🐚 Kerang Menu".toUpperCase(), rowId: _p + "menulist kerang", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "📮 Main Menu".toUpperCase(), rowId: _p + "menulist main", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🎨 Maker Menu".toUpperCase(), rowId: _p + "menulist maker", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "❌ Nocategory Menu".toUpperCase(), rowId: _p + "menulist nocategory", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🔞 Nsfw Menu".toUpperCase(), rowId: _p + "menulist nsfw", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "✏️ Nulis Menu".toUpperCase(), rowId: _p + "menulist nulis", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🧑🏻‍💻 Owner Menu".toUpperCase(), rowId: _p + "menulist owner", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "💎 Premium Menu".toUpperCase(), rowId: _p + "menulist premium", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "📜 Primbon Menu".toUpperCase(), rowId: _p + "menulist primbon", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "💬 Quotes Menu".toUpperCase(), rowId: _p + "menulist quotes", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🕋 Quran Menu".toUpperCase(), rowId: _p + "menulist quran", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🎊 Random Menu".toUpperCase(), rowId: _p + "menulist random", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🕹️ RPG Menu".toUpperCase(), rowId: _p + "menulist rpg", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🏮 Sticker Menu".toUpperCase(), rowId: _p + "menulist sticker", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "🛠️ Tools Menu".toUpperCase(), rowId: _p + "menulist tools", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "📊 Vote Menu".toUpperCase(), rowId: _p + "menulist vote", description: spas + spas2 + mojis + ktx},
+	{title: ++index + "." + spas + "✉️ XP Menu".toUpperCase(), rowId: _p + "menulist xp", description: spas + spas2 + mojis + ktx}
 	]
   }
 ]
@@ -273,7 +276,7 @@ let handler = async (m, { conn, command, groupMetadata, usedPrefix: _p, __dirnam
 let tek = `👋 Hai @${who.split("@")[0]} ${ucapan}
 
 *${htjava} YOUR PROFILE ${htjava}*
-*🏷️ Nama:* *${name}* ${registered ? '(' + name + ') ' : ''}
+*🏷️ Nama:* ${name} ${registered ? '(' + name + ') ' : ''}
 *💲 Money:* *RP* ${money}
 *🏆 Level* ${level}
 *🎋 Role:* ${role}

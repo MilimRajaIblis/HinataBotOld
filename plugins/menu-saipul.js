@@ -68,7 +68,7 @@ case 'tiktok2':
         let smojd = []
 	Object.values(smosj.result.result).map((v, index) => {
 	smojd.push([htki + ' ' + ++index + ' ' + htka, [
-          [Object.keys(smosj.result.result).map(({ key }) => ({ key })), usedPrefix + 'get ' + v.url, '\n\n' + htjava + '\n' + dmenub + ' *Link:* ' + v.url + '\n' + dmenub + ' *Nama:* ' + smosj.result.nama + '\n' + dmenuf]
+          [Object.keys(smosj.result.result).map((vx, index)) => vx, usedPrefix + 'get ' + ++v, '\n\n' + htjava + '\n' + dmenub + ' *Link:* ' + ++v + '\n' + dmenub + ' *Nama:* ' + smosj.result.nama + '\n' + dmenuf]
         ]])
 	})
 	return conn.sendList(m.chat, htki + ' 📺 LIST MESSAGE 🔎 ' + htka, `⚡ Hai ${name} Berikut daftar Menu yg Ada di List Group...`, author, `☂️ Klik Disini ☂️`, smojd, m)

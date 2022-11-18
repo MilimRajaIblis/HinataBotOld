@@ -1,17 +1,34 @@
-import { EmojiAPI } from 'emoji-api' 
-const emoji = new EmojiAPI()
+import { Emoji } from 'emoji-api' 
+let emoji = Emoji
 let handler = async (m, { conn, args, text, usedPrefix, command, isPrems }) => {
 let name = await conn.getName(m.sender)
-let aa = 'Masukkan teks:\nEx. smoji 🗿 m\nm = Module\na = Api'
-let ma = 'Masukkan teks m atau a 🗿'
+throw 'Wait'
+const sections = [
+   {
+	title: `${htki} List Options ${htka}`,
+	rows: [
+	{title: `${htjava} API`, rowId: `${usedPrefix + command} ${args[0]} a`},
+	{title: `${htjava} MODULE`, rowId: `${usedPrefix + command} ${args[0]} m`}
+	]
+    },
+]
 
-if (!args[1] || !args[1]) throw aa
+const listMessage = {
+  text: ' ',
+  footer: botdate,
+  title: `*${htki} OPTIONS ${htka}*`,
+  buttonText: "Click Here!",
+  sections
+}
+if (!args[0] || !args[1]) return conn.sendMessage(m.chat, listMessage, { quoted: fakes })
+
 if (args[1] == 'm') {
-let amo = await emoji.get(`${args[0]}`)
-let emo = amo.images
-	let row = Object.values(emo).map((v, index) => ({
+throw 'Wait'
+let mmo = await emoji.get(`${args[0]}`)
+let emom = mmo.images
+	let row = Object.values(emom).map((v, index) => ({
 		title: v.index + ' Emoji Api ' + v.vendor,
-		description: '\nName: ' + amo.name + '\nEmoji: ' + amo.emoji + '\nUnicode: ' + amo.unicode + '\nDescription: ' + amo.description,
+		description: '\nName: ' + mmo.name + '\nEmoji: ' + mmo.emoji + '\nUnicode: ' + mmo.unicode + '\nDescription: ' + mmo.description,
 		rowId: usedPrefix + 'fetchsticker ' + v.url + ' wsf'
 	}))
 	let button = {
@@ -20,9 +37,10 @@ let emo = amo.images
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)
-	} throw ma
+	}
 if (args[1] == 'a') {
-  let emo = ["apple",
+throw 'Wait'
+  let amo = ["apple",
 "facebook",
 "google",
 "microsoft",
@@ -30,10 +48,10 @@ if (args[1] == 'a') {
 "skype",
 "twitter",
 "whatsapp"]
-	let row = Object.keys(emo).map((v, index) => ({
-		title: '📌 Emoji ' + emo[v],
+	let row = Object.keys(amo).map((v, index) => ({
+		title: '📌 Emoji ' + amo[v],
 		description: '\nBy: ' + wm,
-		rowId: usedPrefix + 'fetchsticker ' + 'https://botcahx-rest-api.herokuapp.com/api/emoji/' + emo[v] + '?emoji=' + args[0] + ' wsf'
+		rowId: usedPrefix + 'fetchsticker ' + 'https://botcahx-rest-api.herokuapp.com/api/emoji/' + amo[v] + '?emoji=' + args[0] + ' wsf'
 	}))
 	let button = {
 		buttonText: `☂️ ${command} Search Disini ☂️`,
@@ -41,7 +59,7 @@ if (args[1] == 'a') {
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)
-	} throw ma
+	}
 }
 handler.help = ['emoji']
 handler.tags = ['sticker'] 

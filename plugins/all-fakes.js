@@ -26,9 +26,11 @@ global.hentais = await ii.json()
 let jj = await(await fetch(gh + 'hinata.json'))
 global.hinatas = await jj.json()
 let kk = await(await fetch(gh + 'Technology.json'))
-global.technos = await kk.json()
+let rkk = await kk.json()
+global.technos = rkk.getRandom()
 let ll = await(await fetch(gh + 'kucing.json'))
-global.cats = await ll.json()
+let rll = await ll.json()
+global.cats = rll.getRandom()
 
 let who = m.sender ? m.sender : conn.user.jid && conn.user.jid ? conn.user.jid : '0@s.whatsapp.net'
 	let name = await conn.getName(who)

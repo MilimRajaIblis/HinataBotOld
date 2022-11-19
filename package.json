@@ -26,16 +26,16 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/AyGemuy",
+    "homepage": "https://github.com/wudysoft",
     "author": {
-        "name": "AyGemuy"
+        "name": "wudysoft"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/AyGemuy/HinataBot.git"
+        "url": "git+https://github.com/wudysoft/HinataBot.git"
     },
     "bugs": {
-        "url": "https://github.com/AyGemuy/HinataBot/issues"
+        "url": "https://github.com/wudysoft/HinataBot/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {

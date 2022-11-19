@@ -4,6 +4,32 @@ import fetch from 'node-fetch'
 import moment from 'moment-timezone'
 import knights from 'knights-canvas'
 export async function before(m, { conn }) {
+let gh = 'https://raw.githubusercontent.com/AyGemuy/RestApi/master/data/'
+let aa = await(await fetch(gh + 'waifu.json'))
+global.waifus = await aa.json()
+let bb = await(await fetch(gh + 'Mountain.json'))
+global.mountains = await bb.json()
+let cc = await(await fetch(gh + 'GameWallp.json'))
+global.wpgames = await cc.json()
+let dd = await(await fetch(gh + 'cosplay.json'))
+global.cosplays = await dd.json()
+let ee = await(await fetch(gh + 'loli.json'))
+global.lolis = await ee.json()
+let ff = await(await fetch(gh + 'yuri.json'))
+global.yuris = await ff.json()
+let gg = await(await fetch(gh + 'neko.json'))
+global.nekos = await gg.json()
+let hh = await(await fetch(gh + 'cosplayloli.json'))
+global.clolis = await hh.json()
+let ii = await(await fetch(gh + 'hentai.json'))
+global.hentais = await ii.json()
+let jj = await(await fetch(gh + 'hinata.json'))
+global.hinatas = await jj.json()
+let kk = await(await fetch(gh + 'Technology.json'))
+global.technos = await kk.json()
+let ll = await(await fetch(gh + 'kucing.json'))
+global.cats = await ll.json()
+
 let who = m.sender ? m.sender : conn.user.jid && conn.user.jid ? conn.user.jid : '0@s.whatsapp.net'
 	let name = await conn.getName(who)
 	let sapa = ['Hai', 'Ohayo', 'Kyaa', 'Halo', 'Nyann'].getRandom()

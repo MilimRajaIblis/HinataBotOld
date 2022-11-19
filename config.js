@@ -4,7 +4,6 @@ import { fileURLToPath } from 'url'
 import fs from 'fs'
 import moment from 'moment-timezone'
 import fetch from 'node-fetch'
-export async function before(m, {}) {
 
 let gh = 'https://raw.githubusercontent.com/AyGemuy/RestApi/master/data/'
 let aa = await fetch(gh + 'waifu.json')
@@ -344,7 +343,6 @@ global.rpg = {
     else return emot[results[0][0]]
   }
  }
-}
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {

@@ -103,10 +103,10 @@ global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${moment.tz('Asia/Jakarta').format('HH:m
 global.titlebot = `⫹⫺ Time Sever : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}\n⫹⫺ Date Server :  ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}`
 
 /*Thumbnail*/
-global.thumb = technos
-global.imagebot = cats
+global.thumb = global.technos
+global.imagebot = global.cats
 global.giflogo = 'https://telegra.ph/file/a46ab7fa39338b1f54d5a.mp4'
-global.thumbs = hinatas
+global.thumbs = global.hinatas
 global.fla='https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 global.flaaa = [
 'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
@@ -115,17 +115,17 @@ global.flaaa = [
 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text=',
 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text=']
 
-global.thumbnailUrl = wpgames
+global.thumbnailUrl = global.wpgames
 
 /*Thumbnail*/
-global.hoppai = cosplays
-global.hyuri = yuris
-global.hLokun = clolis
-global.hloli = lolis
-global.hneko = nekos
-global.hbunny = hentais
-global.hbeach = mountains
-global.hwaifu = waifus
+global.hoppai = global.cosplays
+global.hyuri = global.yuris
+global.hLokun = global.clolis
+global.hloli = global.lolis
+global.hneko = global.nekos
+global.hbunny = global.hentais
+global.hbeach = global.mountains
+global.hwaifu = global.waifus
 /*Link*/
 global.sig = 'https://www.instagram.com/notifikasi_pemberitahuan'
 global.sgh = 'https://www.github.com/AyGemuy'

@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url'
 import fs from 'fs'
 import moment from 'moment-timezone'
 import fetch from 'node-fetch'
-
+export async function before(m, { isAdmin, isBotAdmin }) {
 let gh = 'https://raw.githubusercontent.com/AyGemuy/RestApi/master/data/'
 let aa = await fetch(gh + 'waifu.json')
 let waifus = await aa.json()
@@ -350,3 +350,4 @@ watchFile(file, () => {
   console.log(chalk.redBright('Update config.js'))
   import(`${file}?update=${Date.now()}`)
 })
+}

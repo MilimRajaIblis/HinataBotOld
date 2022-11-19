@@ -5,8 +5,7 @@ import fs from 'fs'
 import moment from 'moment-timezone'
 import fetch from 'node-fetch'
 
-let handler = m => m
-handler.all = async function (m) {
+export async function all(m) {
 let gh = 'https://raw.githubusercontent.com/AyGemuy/RestApi/master/data/'
 let aa = await(await fetch(gh + 'waifu.json'))
 let waifus = await aa.json()
@@ -353,4 +352,3 @@ watchFile(file, () => {
   import(`${file}?update=${Date.now()}`)
 })
 }
-export default handler 

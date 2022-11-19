@@ -4,9 +4,8 @@ import { fileURLToPath } from 'url'
 import fs from 'fs'
 import moment from 'moment-timezone'
 import fetch from 'node-fetch'
-export async function before(m, { conn }) {
-let who = m.sender ? m.sender : conn.user.jid && conn.user.jid ? conn.user.jid : '0@s.whatsapp.net'
-let name = await conn.getName(who)
+export async function before(m, {}) {
+
 let gh = 'https://raw.githubusercontent.com/AyGemuy/RestApi/master/data/'
 let aa = await fetch(gh + 'waifu.json')
 let waifus = await aa.json()
@@ -203,7 +202,7 @@ global.lolm = 'Ⓛ'
 global.htjava = pmenus
 
 /*Watermark*/
-global.stickpack = name
+global.stickpack = cmenua
 global.stickauth = `☂︎ 𝗛𝗶𝗻𝗮𝘁𝗮 乂 𝘄𝘂𝗱𝘆𝘀𝗼𝗳𝘁\n⫹⫺ 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩\nwa.me/${global.nomorbot}`
 global.packname = '☂︎ ᴄʀᴇᴀᴛᴇᴅ ʙʏ'
 global.author = '𝗛𝗶𝗻𝗮𝘁𝗮 乂 𝘄𝘂𝗱𝘆𝘀𝗼𝗳𝘁'
@@ -344,8 +343,8 @@ global.rpg = {
     if (!results.length) return ''
     else return emot[results[0][0]]
   }
+ }
 }
-
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
@@ -353,4 +352,3 @@ watchFile(file, () => {
   console.log(chalk.redBright('Update config.js'))
   import(`${file}?update=${Date.now()}`)
 })
-}

@@ -3,34 +3,6 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 import fs from 'fs'
 import moment from 'moment-timezone'
-import fetch from 'node-fetch'
-
-export async function all(m) {
-let gh = 'https://raw.githubusercontent.com/AyGemuy/RestApi/master/data/'
-let aa = await(await fetch(gh + 'waifu.json'))
-let waifus = await aa.json()
-let bb = await(await fetch(gh + 'Mountain.json'))
-let mountains = await bb.json()
-let cc = await(await fetch(gh + 'GameWallp.json'))
-let wpgames = await cc.json()
-let dd = await(await fetch(gh + 'cosplay.json'))
-let cosplays = await dd.json()
-let ee = await(await fetch(gh + 'loli.json'))
-let lolis = await ee.json()
-let ff = await(await fetch(gh + 'yuri.json'))
-let yuris = await ff.json()
-let gg = await(await fetch(gh + 'neko.json'))
-let nekos = await gg.json()
-let hh = await(await fetch(gh + 'cosplayloli.json'))
-let clolis = await hh.json()
-let ii = await(await fetch(gh + 'hentai.json'))
-let hentais = await ii.json()
-let jj = await(await fetch(gh + 'hinata.json'))
-let hinatas = await jj.json()
-let kk = await(await fetch(gh + 'Technology.json'))
-let technos = await kk.json()
-let ll = await(await fetch(gh + 'kucing.json'))
-let cats = await ll.json()
 
 /*Oᴡɴᴇʀ number*/
 global.owner = [
@@ -344,7 +316,6 @@ global.rpg = {
     else return emot[results[0][0]]
   }
  }
-}
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {

@@ -7,29 +7,29 @@ import fetch from 'node-fetch'
 
 export async function before(m) {
 let gh = 'https://raw.githubusercontent.com/AyGemuy/RestApi/master/data/'
-let aa = await fetch(gh + 'waifu.json')
+let aa = await(await fetch(gh + 'waifu.json'))
 let waifus = await aa.json()
-let bb = await fetch(gh + 'Mountain.json')
+let bb = await(await fetch(gh + 'Mountain.json'))
 let mountains = await bb.json()
-let cc = await fetch(gh + 'GameWallp.json')
+let cc = await(await fetch(gh + 'GameWallp.json'))
 let wpgames = await cc.json()
-let dd = await fetch(gh + 'cosplay.json')
+let dd = await(await fetch(gh + 'cosplay.json'))
 let cosplays = await dd.json()
-let ee = await fetch(gh + 'loli.json')
+let ee = await(await fetch(gh + 'loli.json'))
 let lolis = await ee.json()
-let ff = await fetch(gh + 'yuri.json')
+let ff = await(await fetch(gh + 'yuri.json'))
 let yuris = await ff.json()
-let gg = await fetch(gh + 'neko.json')
+let gg = await(await fetch(gh + 'neko.json'))
 let nekos = await gg.json()
-let hh = await fetch(gh + 'cosplayloli.json')
+let hh = await(await fetch(gh + 'cosplayloli.json'))
 let clolis = await hh.json()
-let ii = await fetch(gh + 'hentai.json')
+let ii = await(await fetch(gh + 'hentai.json'))
 let hentais = await ii.json()
-let jj = await fetch(gh + 'hinata.json')
+let jj = await(await fetch(gh + 'hinata.json'))
 let hinatas = await jj.json()
-let kk = await fetch(gh + 'Technology.json')
+let kk = await(await fetch(gh + 'Technology.json'))
 let technos = await kk.json()
-let ll = await fetch(gh + 'kucing.json')
+let ll = await(await fetch(gh + 'kucing.json'))
 let cats = await ll.json()
 
 /*Oᴡɴᴇʀ number*/
@@ -344,10 +344,11 @@ global.rpg = {
     else return emot[results[0][0]]
   }
  }
-}
+
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
   unwatchFile(file)
   console.log(chalk.redBright('Update config.js'))
   import(`${file}?update=${Date.now()}`)
 })
+}

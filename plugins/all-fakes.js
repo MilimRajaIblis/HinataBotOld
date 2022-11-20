@@ -1,4 +1,4 @@
-//By Hinata
+/* Recoded By HinataBot */
 import fs from 'fs'
 import fetch from 'node-fetch'
 import moment from 'moment-timezone'
@@ -8,45 +8,49 @@ export async function before(m, { conn }) {
 	let who = m.sender ? m.sender : conn.user.jid && conn.user.jid ? conn.user.jid : '0@s.whatsapp.net'
 	let name = await conn.getName(who)
 	
-/*Hiasan*/
-		let hias_titik = ['✦','⛶','❏','⫹⫺','◈','➭','☰','ଓ','⟆•','⳻⳻'].getRandom()
-		let hias_atas = [hias_titik + '┅──┅『',hias_titik + '─┅──┅『',hias_titik + ' ━━━ 『',hias_titik + '═┅═━–『',hias_titik + '––––『',hias_titik + ' ┈┄━━ 『'].getRandom()
-		let hias_kiri = ['┊•','┃','┊↬','┊','┊✦ '].getRandom()
-		let hias_bawah = ['┗━━┈┈ ' + hias_titik,'┗––––––––' + hias_titik,'┗━═┅═━–––––' + hias_titik,'┗┅──────┅' + hias_titik,'┗──┅─────┅' + hias_titik].getRandom()
-		let hias_kanan = ['』┅──┅' + hias_titik,'』┅──┅─' + hias_titik,'』 ━━ ' + hias_titik,'』–━═┅═' + hias_titik,'』––––' + hias_titik,'』 ━━┄┈ ' + hias_titik].getRandom()
-
-/*Thumbnail*/
-		let gh = 'https://raw.githubusercontent.com/AyGemuy/RestApi/master/data/'
-		let aa = await fetch(gh + 'waifu.json')
-		let link_waifu = await aa.json()
-		let bb = await fetch(gh + 'Mountain.json')
-		let cc = await fetch(gh + 'GameWallp.json')
-		let link_game = await cc.json()
-		let dd = await fetch(gh + 'cosplay.json')
-		let ee = await fetch(gh + 'loli.json')
-		let ff = await fetch(gh + 'yuri.json')
-		let gg = await fetch(gh + 'neko.json')
-		let hh = await fetch(gh + 'cosplayloli.json')
-		let ii = await fetch(gh + 'hentai.json')
-		let jj = await fetch(gh + 'hinata.json')
-		let kk = await fetch(gh + 'Technology.json')
-		let random_kk = await kk.json()
-		let ll = await fetch(gh + 'kucing.json')
-		let random_ll = await ll.json()
-		let mm = await fetch(gh + 'naruto.json')
-		let random_mm = await mm.json()
-		let nn = await fetch(gh + 'CyberSpace.json')
-		let random_nn = await nn.json()
+	/* Hiasan */
+		let ini_titik = ['✦','⛶','❏','⫹⫺','◈','➭','☰','ଓ','⟆•','⳻⳻','•','↬'].getRandom()
+		let ini_garis = ['┅──┅','━━━','═┅┅═','––––','–━═━–','──┅──','═┅┅┅═','┈┅━┅┈','┈┄═┅═┄┈','┅══┅'].getRandom()
+		let ini_panjang = ['┅──┅┅──┅','━━━━━━','═┅┅══┅┅═','––––––––','–━═━––━═━–','──┅────┅──','═┅┅┅══┅┅┅═','┈┅━┅┈┈┅━┅┈','┈┄═┅═┄┈┈┄═┅═┄┈','┅══┅┅══┅'].getRandom()
+		let ini_L = ['┗','└','┕','╚','╘','╙','╰'].getRandom()
+		let ini_I = ['│','┃','┆','┇','┊','┋','╎','╏','║'].getRandom()
+		let ini_atas = ini_titik + ini_garis + '『'
+		let ini_kiri = ini_I + ini_titik
+		let ini_bawah = ini_L + ini_panjang + ini_titik
+		let ini_kanan = '』' + ini_garis + ini_titik
+		
+		/* Thumbnail */
+		let gh = 'https://raw.githubusercontent.com/wudysoft/RestApi/master/data/'
+		let a_ = await fetch(gh + 'waifu.json')
+		let link_waifu = await a_.json()
+		let b_ = await fetch(gh + 'Mountain.json')
+		let c_ = await fetch(gh + 'GameWallp.json')
+		let link_game = await c_.json()
+		let d_ = await fetch(gh + 'cosplay.json')
+		let e_ = await fetch(gh + 'loli.json')
+		let f_ = await fetch(gh + 'yuri.json')
+		let g_ = await fetch(gh + 'neko.json')
+		let h_ = await fetch(gh + 'cosplayloli.json')
+		let i_ = await fetch(gh + 'hentai.json')
+		let j_ = await fetch(gh + 'hinata.json')
+		let k_ = await fetch(gh + 'Technology.json')
+		let k__ = await k_.json()
+		let l_ = await fetch(gh + 'kucing.json')
+		let l__ = await l_.json()
+		let m_ = await fetch(gh + 'naruto.json')
+		let m__ = await m_.json()
+		let n_ = await fetch(gh + 'CyberSpace.json')
+		let n__ = await n_.json()
 		
 	let sapa = ['ʜᴀɪ', 'ᴏʜᴀʏᴏ', 'ᴋʏᴀᴀ', 'ʜᴀʟᴏ', 'ɴʏᴀɴɴ'].getRandom()
 	let curr = ['IDR','RSD','USD'].getRandom()
 	let pp = await conn.profilePictureUrl(who, 'image').catch(_ => link_waifu.getRandom())
 	
-    // jpegThumbnail
+    /* jpegThumbnail */
     let _situm = await conn.resize(link_game.getRandom(), 300, 150)
     let sipp = await conn.resize(pp, 150, 150)
     
-    // Fake Knights
+    /* Fake Knights */
 		let imagea = await new knights.Jo().setImage(pp).toBuild();
 		let dataa = imagea.toBuffer();
 		let imageb = await new knights.Patrick().setAvatar(pp).toAttachment();
@@ -57,42 +61,42 @@ export async function before(m, { conn }) {
 		let datad = imaged.toBuffer();
 		let _kn = [dataa, datab, datac, datad].getRandom()
 		
-/*Hiasan*/
-		global.dmenut = hias_atas
-		global.dmenub = hias_kiri
+		/* Hiasan */
+		global.dmenut = ini_atas
+		global.dmenub = ini_kiri
 		global.dmenub2 = dmenub
-		global.dmenuf = hias_bawah
+		global.dmenuf = ini_bawah
 		global.cmenut = dmenut
-		global.cmenuh = hias_kanan
+		global.cmenuh = ini_kanan
 		global.cmenub = dmenub
 		global.cmenuf = dmenuf
-		global.pmenus = hias_titik
-		global.dashmenu = hias_titik + ' *D A S B O A R D* ' + hias_titik
+		global.pmenus = ini_titik
+		global.dashmenu = ini_titik + ' *D A S B O A R D* ' + ini_titik
 		global.htki = dmenut
 		global.htka = cmenuh
 		global.htjava = pmenus
-
-/*Thumbnail*/
+		
+		/* Thumbnail */
 		global.hwaifu = link_waifu
-		global.hbeach = await bb.json()
+		global.hbeach = await b_.json()
 		global.thumbnailUrl = link_game
-		global.hoppai = await dd.json()
-		global.hloli = await ee.json()
-		global.hyuri = await ff.json()
-		global.hneko = await gg.json()
-		global.hLokun = await hh.json()
-		global.hbunny = await ii.json()
-		global.thumbs = await jj.json()
-		global.thumb = random_kk.getRandom()
-		global.imagebot = random_ll.getRandom()
-		global.thumbdoc = random_nn.getRandom()
-		global.logo = random_mm.getRandom()
-
-	// Begin
+		global.hoppai = await d_.json()
+		global.hloli = await e_.json()
+		global.hyuri = await f_.json()
+		global.hneko = await g_.json()
+		global.hLokun = await h_.json()
+		global.hbunny = await i_.json()
+		global.thumbs = await j_.json()
+		global.thumb = k__.getRandom()
+		global.imagebot = l__.getRandom()
+		global.thumbdoc = n__.getRandom()
+		global.logo = m__.getRandom()
+		
+		/* Begin */
 		global.ucapan = ucapkan()
 		global.ephemeral = '86400'
 		
- // Fake adReply
+		/* Fake adReply */
 		global.adReply = {
 		fileLength: fsizedoc, seconds: fsizedoc,
 			contextInfo: {
@@ -191,7 +195,7 @@ export async function before(m, { conn }) {
 				}
 			}
 			
-	// Fake Reply
+			/* Fake Reply */
 		let fpayment = {
 				key: {
 					participant: '0@s.whatsapp.net', remoteJid: 'status@broadcast'
@@ -354,13 +358,14 @@ export async function before(m, { conn }) {
 		}
 		let _pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'].getRandom()
 		let _pft = [fdocs, fgif, fkontak, fliveLoc, fpayment, fpoll, ftextt, ftoko, ftroli, fvid, fvn].getRandom()
-		// Global Fake
+		
+		/* Global Fake */
 		global.doc = _pdoc
 		global.fakes = _pft
 		global.knimg = _kn
 		global.tumhiho = _situm
 		
-	// Ends
+		/* Ends */
 }
 
 function ucapkan() {

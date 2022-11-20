@@ -9,19 +9,19 @@ export async function before(m, { conn }) {
 	let name = await conn.getName(who)
 	
 /*Hiasan*/
-		let hats =  ['┅────┅『','❏┅────┅『','❏─┅──┅〈','☰ ━━━ ❨','ଓ═┅═━–〈','❩ ━━┄┈ •⟅','❏––––––『','––––––『'].getRandom()
-		let hkri =  ['┊•','┃','┊↬','┊','┊✦ '].getRandom()
-		let hbwh =  ['┗━━┈┈ ⳻⳻','┗––––––––––✦','┗━═┅═━––––––๑\n','』––––––','┗┅────────┅✦\n','┗──┅───────┅๑\n'].getRandom()
-		let hkna = ['』┅────┅','』––––––','❩ ━━┄┈ •⟅'].getRandom()
-		let httk = ['✦','⛶','❏','⫹⫺','◈▻','➭'].getRandom()
+		let hias_titik = ['✦','⛶','❏','⫹⫺','◈','➭','☰','ଓ','⟆•','⳻⳻'].getRandom()
+		let hias_atas = [hias_titik + '┅──┅『',hias_titik + '─┅──┅『',hias_titik + ' ━━━ 『',hias_titik + '═┅═━–『',hias_titik + '––––『',hias_titik + ' ┈┄━━ 『'].getRandom()
+		let hias_kiri = ['┊•','┃','┊↬','┊','┊✦ '].getRandom()
+		let hias_bawah = ['┗━━┈┈ ' + hias_titik,'┗––––––––' + hias_titik,'┗━═┅═━–––––' + hias_titik,'┗┅──────┅' + hias_titik,'┗──┅─────┅' + hias_titik].getRandom()
+		let hias_kanan = ['』┅──┅' + hias_titik,'』┅──┅─' + hias_titik,'』 ━━ ' + hias_titik,'』–━═┅═' + hias_titik,'』––––' + hias_titik,'』 ━━┄┈ ' + hias_titik].getRandom()
 
 /*Thumbnail*/
 		let gh = 'https://raw.githubusercontent.com/AyGemuy/RestApi/master/data/'
 		let aa = await fetch(gh + 'waifu.json')
-		let wangfu = await aa.json()
+		let link_waifu = await aa.json()
 		let bb = await fetch(gh + 'Mountain.json')
 		let cc = await fetch(gh + 'GameWallp.json')
-		let gmwall = await cc.json()
+		let link_game = await cc.json()
 		let dd = await fetch(gh + 'cosplay.json')
 		let ee = await fetch(gh + 'loli.json')
 		let ff = await fetch(gh + 'yuri.json')
@@ -30,20 +30,20 @@ export async function before(m, { conn }) {
 		let ii = await fetch(gh + 'hentai.json')
 		let jj = await fetch(gh + 'hinata.json')
 		let kk = await fetch(gh + 'Technology.json')
-		let rkk = await kk.json()
+		let random_kk = await kk.json()
 		let ll = await fetch(gh + 'kucing.json')
-		let rll = await ll.json()
+		let random_ll = await ll.json()
 		let mm = await fetch(gh + 'naruto.json')
-		let rmm = await mm.json()
+		let random_mm = await mm.json()
 		let nn = await fetch(gh + 'CyberSpace.json')
-		let rnn = await nn.json()
+		let random_nn = await nn.json()
 		
-	let sapa = ['Hai', 'Ohayo', 'Kyaa', 'Halo', 'Nyann'].getRandom()
-	let curr = ['AED','AFN','ALL','AMD','ANG','AOA','ARS','AUD','AWG','AZN','BAM','BBD','BDT','BGN','BHD','BIF','BMD','BND','BOB','BOV','BRL','BSD','BTN','BWP','BYR','BZD','CAD','CDF','CHE','CHF','CHW','CLF','CLP','CNY','COP','COU','CRC','CUC','CUP','CVE','CZK','DJF','DKK','DOP','DZD','EGP','ERN','ETB','EUR','FJD','FKP','GBP','GEL','GHS','GIP','GMD','GNF','GTQ','GYD','HKD','HNL','HRK','HTG','HUF','IDR','ILS','INR','IQD','IRR','ISK','JMD','JOD','JPY','KES','KGS','KHR','KMF','KPW','KRW','KWD','KYD','KZT','LAK','LBP','LKR','LRD','LSL','LTL','LVL','LYD','MAD','MDL','MGA','MKD','MMK','MNT','MOP','MRO','MUR','MVR','MWK','MXN','MXV','MYR','MZN','NAD','NGN','NIO','NOK','NPR','NZD','OMR','PAB','PEN','PGK','PHP','PKR','PLN','PYG','QAR','RON','RSD','RUB','RWF','SAR','SBD','SCR','SDG','SEK','SGD','SHP','SLL','SOS','SRD','SSP','STD','SYP','SZL','THB','TJS','TMT','TND','TOP','TRY','TTD','TWD','TZS','UAH','UGX','USD','USN','USS','UYI','UYU','UZS','VEF','VND','VUV','WST','XAF','XAG','XAU','XBA','XBB','XBC','XBD','XCD','XDR','XFU','XOF','XPD','XPF','XPT','XTS','XXX','YER','ZAR','ZMW'].getRandom()
-	let pp = await conn.profilePictureUrl(who, 'image').catch(_ => wangfu.getRandom())
+	let sapa = ['ʜᴀɪ', 'ᴏʜᴀʏᴏ', 'ᴋʏᴀᴀ', 'ʜᴀʟᴏ', 'ɴʏᴀɴɴ'].getRandom()
+	let curr = ['IDR','RSD','USD'].getRandom()
+	let pp = await conn.profilePictureUrl(who, 'image').catch(_ => link_waifu.getRandom())
 	
     // jpegThumbnail
-    let _situm = await conn.resize(gmwall.getRandom(), 300, 150)
+    let _situm = await conn.resize(link_game.getRandom(), 300, 150)
     let sipp = await conn.resize(pp, 150, 150)
     
     // Fake Knights
@@ -58,24 +58,24 @@ export async function before(m, { conn }) {
 		let _kn = [dataa, datab, datac, datad].getRandom()
 		
 /*Hiasan*/
-		global.dmenut = hats
-		global.dmenub = hkri
+		global.dmenut = hias_atas
+		global.dmenub = hias_kiri
 		global.dmenub2 = dmenub
-		global.dmenuf = hbwh
+		global.dmenuf = hias_bawah
 		global.cmenut = dmenut
-		global.cmenuh = hkna
+		global.cmenuh = hias_kanan
 		global.cmenub = dmenub
 		global.cmenuf = dmenuf
-		global.pmenus = httk
-		global.dashmenu = dmenut + ' *𝐃𝐀𝐒𝐇𝐁𝐎𝐀𝐑𝐃* ' + cmenuh
+		global.pmenus = hias_titik
+		global.dashmenu = hias_titik + ' *D A S B O A R D* ' + hias_titik
 		global.htki = dmenut
 		global.htka = cmenuh
 		global.htjava = pmenus
 
 /*Thumbnail*/
-		global.hwaifu = wangfu
+		global.hwaifu = link_waifu
 		global.hbeach = await bb.json()
-		global.thumbnailUrl = gmwall
+		global.thumbnailUrl = link_game
 		global.hoppai = await dd.json()
 		global.hloli = await ee.json()
 		global.hyuri = await ff.json()
@@ -83,10 +83,10 @@ export async function before(m, { conn }) {
 		global.hLokun = await hh.json()
 		global.hbunny = await ii.json()
 		global.thumbs = await jj.json()
-		global.thumb = rkk.getRandom()
-		global.imagebot = rll.getRandom()
-		global.thumbdoc = rnn.getRandom()
-		global.logo = rmm.getRandom()
+		global.thumb = random_kk.getRandom()
+		global.imagebot = random_ll.getRandom()
+		global.thumbdoc = random_nn.getRandom()
+		global.logo = random_mm.getRandom()
 
 	// Begin
 		global.ucapan = ucapkan()
@@ -99,8 +99,9 @@ export async function before(m, { conn }) {
 				forwardingScore: fsizedoc,
 				externalAdReply: {
 					showAdAttribution: true,
+					renderLargerThumbnail: true,
 					title: author,
-					body: '👋 ' + sapa + ' Kak :> ' + name,
+					body: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
 					mediaUrl: sgc,
 					description: botdate,
 					previewType: 'PHOTO',
@@ -114,10 +115,11 @@ export async function before(m, { conn }) {
 				contextInfo: {
 					externalAdReply: {
 						showAdAttribution: true,
+						renderLargerThumbnail: true,
 						mediaUrl: sig,
 						mediaType: 'VIDEO',
-						description: 'Follow: ' + sig,
-						title: '👋 ' + sapa + ' Kak :> ' + name,
+						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + sig,
+						title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
 						body: botdate,
 						thumbnailUrl: pp,
 						sourceUrl: sgc
@@ -129,10 +131,11 @@ export async function before(m, { conn }) {
 				contextInfo: {
 					externalAdReply: {
 						showAdAttribution: true,
+						renderLargerThumbnail: true,
 						mediaUrl: sfb,
 						mediaType: 'VIDEO',
-						description: 'Follow: ' + sfb,
-						title: '👋 ' + sapa + ' Kak :> ' + name,
+						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + sfb,
+						title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
 						body: botdate,
 						thumbnailUrl: pp,
 						sourceUrl: sfb
@@ -144,10 +147,11 @@ export async function before(m, { conn }) {
 				contextInfo: {
 					externalAdReply: {
 						showAdAttribution: true,
+						renderLargerThumbnail: true,
 						mediaUrl: snh,
 						mediaType: 'VIDEO',
-						description: 'Follow: ' + snh,
-						title: '👋 ' + sapa + ' Kak :> ' + name,
+						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + snh,
+						title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
 						body: botdate,
 						thumbnailUrl: pp,
 						sourceUrl: snh
@@ -159,10 +163,11 @@ export async function before(m, { conn }) {
 				contextInfo: {
 					externalAdReply: {
 						showAdAttribution: true,
+						renderLargerThumbnail: true,
 						mediaUrl: syt,
 						mediaType: 'VIDEO',
-						description: 'Follow: ' + syt,
-						title: '👋 ' + sapa + ' Kak :> ' + name,
+						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + syt,
+						title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
 						body: botdate,
 						thumbnailUrl: pp,
 						sourceUrl: syt
@@ -182,7 +187,7 @@ export async function before(m, { conn }) {
 						requestFrom: '0@s.whatsapp.net',
 						noteMessage: {
 							extendedTextMessage: {
-								text: '👋 Hay Kak :> ' + name
+								text: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name
 							}
 						},
 						expiryTimestamp: fsizedoc,
@@ -200,7 +205,7 @@ export async function before(m, { conn }) {
 			},
 			message: {
 				pollCreationMessage: {
-					name: '👋 Hay Kak :> ' + name
+					name: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name
 				}
 			}
 		}
@@ -254,7 +259,7 @@ export async function before(m, { conn }) {
 					title: author,
 					h: 'Hmm',
 					seconds: fsizedoc,
-					caption: '👋 ' + sapa + ' Kak :> ' + name,
+					caption: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
 					jpegThumbnail: sipp
 				}
 			}
@@ -265,7 +270,7 @@ export async function before(m, { conn }) {
 			},
 			message: {
 				extendedTextMessage: {
-					text: '👋 ' + sapa + ' Kak :> ' + name,
+					text: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
 					title: botdate,
 					jpegThumbnail: sipp
 				}
@@ -277,7 +282,7 @@ export async function before(m, { conn }) {
 			},
 			message: {
 				liveLocationMessage: {
-					caption: '👋 ' + sapa + ' Kak :> ' + name,
+					caption: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
 					h: botdate,
 					jpegThumbnail: sipp
 				}
@@ -294,7 +299,7 @@ export async function before(m, { conn }) {
 							mimetype: 'image/jpeg',
 							jpegThumbnail: sipp
 						},
-						title: '👋 ' + sapa + ' Kak :> ' + name,
+						title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
 						description: botdate,
 						currencyCode: 'IDR',
 						priceAmount1000: fsizedoc,
@@ -322,7 +327,7 @@ export async function before(m, { conn }) {
 			},
 			message: {
 				videoMessage: {
-					title: '👋 ' + sapa + ' Kak :> ' + name,
+					title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
 					h: 'Hmm',
 					seconds: fsizedoc,
 					gifPlayback: true,

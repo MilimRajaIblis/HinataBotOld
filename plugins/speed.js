@@ -1,6 +1,7 @@
 import { cpus as _cpus, totalmem, freemem } from 'os'
 import util from 'util'
 import os from 'os'
+import fs from 'fs'
 import fetch from 'node-fetch'
 import osu from 'node-os-utils'
 import { performance } from 'perf_hooks'
@@ -11,7 +12,7 @@ let format = sizeFormatter({
   keepTrailingZeroes: false,
   render: (literal, symbol) => `${literal} ${symbol}B`,
 })
-let handler = async (m, { conn, usedPrefix, isRowner}) => {
+let handler = async (m, { conn, isRowner}) => {
 	let _muptime
     if (process.send) {
       process.send('uptime')
@@ -50,44 +51,49 @@ let handler = async (m, { conn, usedPrefix, isRowner}) => {
   })
 
   let old = performance.now()
-  await m.reply(`${htjava} *T e s t i n g. . .*`)
+  await m.reply(`${htjava} *ᴛ ᴇ s ᴛ ɪ ɴ ɢ . . .*`)
   let neww = performance.now()
+  let session = fs.statSync(authFile)
   let speed = neww - old
-  let caption = `*${htki} S P E E D ${htka}*
+  let runtt = `*s ᴘ ᴇ ᴇ ᴅ*
 ${Math.round(neww - old)} ms
 ${speed} ms
 
-*${htjava} R U N T I M E* 
+*ʀ ᴜ ɴ ᴛ ɪ ᴍ ᴇ* 
 ${muptime}
 ${readMore}
-*${htjava} C H A T S*
+*ᴄ ʜ ᴀ ᴛ s*
 • *${groupsIn.length}* Group Chats
 • *${groupsIn.length}* Groups Joined
 • *${groupsIn.length - groupsIn.length}* Groups Left
 • *${chats.length - groupsIn.length}* Personal Chats
 • *${chats.length}* Total Chats
 
-*${htjava} S E R V E R*
-*🛑 RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
-*🔵 FreeRAM:* ${format(freemem())}
 
-*💻 Platform :* ${os.platform()}
-*🧿 Server :* ${os.hostname()}
+*s ᴇ ʀ ᴠ ᴇ ʀ*
+*🛑 ʀᴀᴍ:* ${format(totalmem() - freemem())} / ${format(totalmem())}
+*🔵 ғʀᴇᴇRAM:* ${format(freemem())}
+*📑 sᴇssɪᴏɴ sɪᴢᴇ :* ${format(session.size)}
+*💻 ᴘʟᴀᴛғᴏʀᴍ :* ${os.platform()}
+*🧿 sᴇʀᴠᴇʀ :* ${os.hostname()}
 ${readMore}
-
-*NodeJS Memory Usage*
+NodeJS Memory Usage*
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
 
-${cpus[0] ? `*Total CPU Usage*
+${cpus[0] ? `_Total CPU Usage_
 ${cpus[0].model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}
 
-*CPU Core(s) Usage (${cpus.length} Core CPU)*
-${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}`).join('\n\n')}` : ''}
-`
-await conn.sendButton(m.chat, caption, wm, hwaifu.getRandom(), [
-[`ᴏᴡɴᴇʀ`, `${usedPrefix}owner`],
-[`ᴅᴏɴᴀᴛᴇ`, `${usedPrefix}donate`]
-], m)
+_CPU Core(s) Usage (${cpus.length} Core CPU)_
+${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}`).join('\n\n')}` : ''}` 
+await conn.relayMessage(m.chat, { requestPaymentMessage: {
+  noteMessage: { extendedTextMessage: { text: runtt,
+  currencyCodeIso4217: 'USD',
+  requestFrom: '0@s.whatsapp.net',
+  expiryTimestamp: 8600,
+  amount: 10000,
+  background: thumb
+}}}}, {})
+
 }
 handler.help = ['ping', 'speed']
 handler.tags = ['info', 'tools']
@@ -103,5 +109,5 @@ function clockString(ms) {
   let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return ['\n' + d, ' *Days ☀️*\n ', h, ' *Hours 🕐*\n ', m, ' *Minute ⏰*\n ', s, ' *Second ⏱️* '].map(v => v.toString().padStart(2, 0)).join('')
+  return [d, ' *Days ☀️*\n ', h, ' *Hours 🕐*\n ', m, ' *Minute ⏰*\n ', s, ' *Second ⏱️* '].map(v => v.toString().padStart(2, 0)).join('')
 }

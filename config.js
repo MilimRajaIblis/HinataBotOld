@@ -4,6 +4,17 @@ import { fileURLToPath } from 'url'
 import fs from 'fs'
 import moment from 'moment-timezone'
 
+let ats =  ['┅────┅『','❏┅────┅『','❏─┅──┅〈','☰ ━━━ ❨','ଓ═┅═━–〈','❩ ━━┄┈ •⟅','❏––––––『','––––––『']
+let hats = ats[Math.floor(Math.random() * ats.length)]
+let kri =  ['┊•','┃','┊↬','┊','┊✦ ']
+let hkri = kri[Math.floor(Math.random() * kri.length)]
+let bwh =  ['┗━━┈┈ ⳻⳻','┗––––––––––✦','┗━═┅═━––––––๑\n','』––––––','┗┅────────┅✦\n','┗──┅───────┅๑\n']
+let hbwh = bwh[Math.floor(Math.random() * bwh.length)]
+let kna = ['』┅────┅','』––––––','❩ ━━┄┈ •⟅']
+let hkna = kna[Math.floor(Math.random() * kna.length)]
+let ttk = ['✦','⛶','❏','⫹⫺','◈▻','➭']
+let httk = ttk[Math.floor(Math.random() * ttk.length)]
+
 /*Oᴡɴᴇʀ number*/
 global.owner = [
   ['6282195322106', '️One', true],
@@ -139,18 +150,18 @@ global.thumbdoc = 'https://telegra.ph/file/6e45318d7c76f57e4a8bd.jpg'
 
 
 /*Hiasan*/
-global.dmenut = ['┅────┅『','❏┅────┅『','❏─┅──┅〈','☰ ━━━ ❨','ଓ═┅═━–〈','❩ ━━┄┈ •⟅','❏––––––『','––––––『'].getRandom()
-global.dmenub = ['┊•','┃','┊↬','┊','┊✦ '].getRandom()
+global.dmenut = hats
+global.dmenub = hkri
 global.dmenub2 = dmenub
-global.dmenuf = ['┗━━┈┈ ⳻⳻','┗––––––––––✦','┗━═┅═━––––––๑\n','』––––––','┗┅────────┅✦\n','┗──┅───────┅๑\n'].getRandom()
+global.dmenuf = hbwh
 
 /*Hiasan*/
 global.cmenut = dmenut
-global.cmenuh = ['』┅────┅','』––––––','❩ ━━┄┈ •⟅'].getRandom()
+global.cmenuh = hkna
 global.cmenub = dmenub
 global.cmenuf = dmenuf
 global.cmenua = '\n⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕\n     '
-global.pmenus = ['✦','⛶','❏','⫹⫺','◈▻','➭'].getRandom()
+global.pmenus = httk
 global.dashmenu = dmenut + ' *𝐃𝐀𝐒𝐇𝐁𝐎𝐀𝐑𝐃* ' + cmenuh
 
 global.htki = dmenut

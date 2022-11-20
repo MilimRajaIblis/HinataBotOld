@@ -140,16 +140,16 @@ global.fpagedoc = '9'.repeat(3)
 global.lopr = '🅟'
 global.lolm = 'Ⓛ'
 global.cmenua = '\n⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕\n     '
-global.packname = 'ᴍᴀᴅᴇ ʙʏ'
+global.packname = '𝗠𝗮𝗱𝗲 𝗕𝘆'
 global.stickpack = packname
 global.author = '𝗛𝗶𝗻𝗮𝘁𝗮 乂 𝘄𝘂𝗱𝘆𝘀𝗼𝗳𝘁'
 global.stickauth = author + '\nwa.me/' + nomorbot
 global.multiplier = 10
 
 /*Pesan*/
-global.eror = '*ᴇʀᴏʀʀ!*'
-global.wait = '*ᴡᴀɪᴛ!*'
-global.render = '*ʀᴇɴᴅᴇʀ!*'
+global.eror = '*E R R O R*'
+global.wait = '*W A I T*'
+global.render = '*R E N D E R*'
 global.webs = 'https://s.id/Cerdasin62'
 global.gcwangsaf = 'https://chat.whatsapp.com/Fxz8FpQ0ddr2GrEjfYkJ1E'
 

@@ -39,7 +39,7 @@
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
-        "@adiwajshing/baileys": "*",
+        "@adiwajshing/baileys": "github:amiruldev20/Baileys",
         "@bochilteam/scraper": "*",
         "@deepgram/sdk": "*",
         "@ibaraki-douji/pixivts": "*",
@@ -106,7 +106,7 @@
         "url": "*",
         "url-regex-safe": "*",
         "wa-sticker-formatter": "*",
-        "xfarr-api": "^1.0.3",
+        "xfarr-api": "github:xfar05/xfarr-api",
         "yargs": "*",
         "zs-extract": "*"
     },

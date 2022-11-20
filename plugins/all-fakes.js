@@ -4,35 +4,6 @@ import fetch from 'node-fetch'
 import moment from 'moment-timezone'
 import knights from 'knights-canvas'
 export async function before(m, { conn }) {
-let gh = 'https://raw.githubusercontent.com/AyGemuy/RestApi/master/data/'
-/*Thumbnail*/
-let aa = await fetch(gh + 'waifu.json')
-global.hwaifu = await aa.json()
-let bb = await fetch(gh + 'Mountain.json')
-global.hbeach = await bb.json()
-let cc = await fetch(gh + 'GameWallp.json')
-global.thumbnailUrl = await cc.json()
-let dd = await fetch(gh + 'cosplay.json')
-global.hoppai = await dd.json()
-let ee = await fetch(gh + 'loli.json')
-global.hloli = await ee.json()
-let ff = await fetch(gh + 'yuri.json')
-global.hyuri = await ff.json()
-let gg = await fetch(gh + 'neko.json')
-global.hneko = await gg.json()
-let hh = await fetch(gh + 'cosplayloli.json')
-global.hLokun = await hh.json()
-let ii = await fetch(gh + 'hentai.json')
-global.hbunny = await ii.json()
-let jj = await fetch(gh + 'hinata.json')
-global.thumbs = await jj.json()
-let kk = await fetch(gh + 'Technology.json')
-let rkk = await kk.json()
-global.thumb = rkk.getRandom()
-let ll = await fetch(gh + 'kucing.json')
-let rll = await ll.json()
-global.imagebot = rll.getRandom()
-
 let who = m.sender ? m.sender : conn.user.jid && conn.user.jid ? conn.user.jid : '0@s.whatsapp.net'
 	let name = await conn.getName(who)
 	let sapa = ['Hai', 'Ohayo', 'Kyaa', 'Halo', 'Nyann'].getRandom()
@@ -53,6 +24,59 @@ let who = m.sender ? m.sender : conn.user.jid && conn.user.jid ? conn.user.jid :
 		let imaged = await new knights.Burn().setAvatar(pp).toAttachment();
 		let datad = imaged.toBuffer();
 		let _kn = [dataa, datab, datac, datad].getRandom()
+		
+/*Hiasan*/
+		let hats =  ['┅────┅『','❏┅────┅『','❏─┅──┅〈','☰ ━━━ ❨','ଓ═┅═━–〈','❩ ━━┄┈ •⟅','❏––––––『','––––––『'].getRandom()
+		let hkri =  ['┊•','┃','┊↬','┊','┊✦ '].getRandom()
+		let hbwh =  ['┗━━┈┈ ⳻⳻','┗––––––––––✦','┗━═┅═━––––––๑\n','』––––––','┗┅────────┅✦\n','┗──┅───────┅๑\n'].getRandom()
+		let hkna = ['』┅────┅','』––––––','❩ ━━┄┈ •⟅'].getRandom()
+		let httk = ['✦','⛶','❏','⫹⫺','◈▻','➭'].getRandom()
+
+/*Thumbnail*/
+		let gh = 'https://raw.githubusercontent.com/AyGemuy/RestApi/master/data/'
+		let aa = await fetch(gh + 'waifu.json')
+		let bb = await fetch(gh + 'Mountain.json')
+		let cc = await fetch(gh + 'GameWallp.json')
+		let dd = await fetch(gh + 'cosplay.json')
+		let ee = await fetch(gh + 'loli.json')
+		let ff = await fetch(gh + 'yuri.json')
+		let gg = await fetch(gh + 'neko.json')
+		let hh = await fetch(gh + 'cosplayloli.json')
+		let ii = await fetch(gh + 'hentai.json')
+		let jj = await fetch(gh + 'hinata.json')
+		let kk = await fetch(gh + 'Technology.json')
+		let rkk = await kk.json()
+		let ll = await fetch(gh + 'kucing.json')
+		let rll = await ll.json()
+		
+/*Hiasan*/
+		global.dmenut = hats
+		global.dmenub = hkri
+		global.dmenub2 = dmenub
+		global.dmenuf = hbwh
+		global.cmenut = dmenut
+		global.cmenuh = hkna
+		global.cmenub = dmenub
+		global.cmenuf = dmenuf
+		global.pmenus = httk
+		global.dashmenu = dmenut + ' *𝐃𝐀𝐒𝐇𝐁𝐎𝐀𝐑𝐃* ' + cmenuh
+		global.htki = dmenut
+		global.htka = cmenuh
+		global.htjava = pmenus
+
+/*Thumbnail*/
+		global.hwaifu = await aa.json()
+		global.hbeach = await bb.json()
+		global.thumbnailUrl = await cc.json()
+		global.hoppai = await dd.json()
+		global.hloli = await ee.json()
+		global.hyuri = await ff.json()
+		global.hneko = await gg.json()
+		global.hLokun = await hh.json()
+		global.hbunny = await ii.json()
+		global.thumbs = await jj.json()
+		global.thumb = rkk.getRandom()
+		global.imagebot = rll.getRandom()
 
 	// Begin
 		global.ucapan = ucapkan()

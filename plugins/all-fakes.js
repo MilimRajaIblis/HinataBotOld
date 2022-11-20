@@ -99,8 +99,6 @@ export async function before(m, { conn }) {
 				forwardingScore: fsizedoc,
 				externalAdReply: {
 						showAdAttribution: true,
-						renderLargerThumbnail: true,
-						containsAutoReply: true,
 						title: author,
 						body: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
 						mediaUrl: sgc,
@@ -111,13 +109,32 @@ export async function before(m, { conn }) {
 				}
 			}
 		}
+		global.adReplyL = {
+		fileLength: fsizedoc, seconds: fsizedoc,
+			contextInfo: {
+				forwardingScore: fsizedoc,
+				externalAdReply: {
+						body: botdate,
+						containsAutoReply: true,
+						mediaType: 1,
+						mediaUrl: sgc,
+						renderLargerThumbnail: true,
+						showAdAttribution: true,
+						sourceId: author,
+						sourceType: 'PDF',
+						previewType: 'PDF',
+						sourceUrl: sgc,
+						thumbnail: await(await fetch(pp)).buffer(),
+						thumbnailUrl: pp,
+						title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name
+				}
+			}
+		}
 		global.fakeig = {
 		fileLength: fsizedoc, seconds: fsizedoc,
 				contextInfo: {
 					externalAdReply: {
 						showAdAttribution: true,
-						renderLargerThumbnail: true,
-						containsAutoReply: true,
 						mediaUrl: sig,
 						mediaType: 'VIDEO',
 						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + sig,
@@ -133,8 +150,6 @@ export async function before(m, { conn }) {
 				contextInfo: {
 					externalAdReply: {
 						showAdAttribution: true,
-						renderLargerThumbnail: true,
-						containsAutoReply: true,
 						mediaUrl: sfb,
 						mediaType: 'VIDEO',
 						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + sfb,
@@ -150,8 +165,6 @@ export async function before(m, { conn }) {
 				contextInfo: {
 					externalAdReply: {
 						showAdAttribution: true,
-						renderLargerThumbnail: true,
-						containsAutoReply: true,
 						mediaUrl: snh,
 						mediaType: 'VIDEO',
 						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + snh,
@@ -167,8 +180,6 @@ export async function before(m, { conn }) {
 				contextInfo: {
 					externalAdReply: {
 						showAdAttribution: true,
-						renderLargerThumbnail: true,
-						containsAutoReply: true,
 						mediaUrl: syt,
 						mediaType: 'VIDEO',
 						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + syt,

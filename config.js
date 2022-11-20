@@ -4,17 +4,6 @@ import { fileURLToPath } from 'url'
 import fs from 'fs'
 import moment from 'moment-timezone'
 
-let ats =  ['┅────┅『','❏┅────┅『','❏─┅──┅〈','☰ ━━━ ❨','ଓ═┅═━–〈','❩ ━━┄┈ •⟅','❏––––––『','––––––『']
-let hats = ats[Math.floor(Math.random() * ats.length)]
-let kri =  ['┊•','┃','┊↬','┊','┊✦ ']
-let hkri = kri[Math.floor(Math.random() * kri.length)]
-let bwh =  ['┗━━┈┈ ⳻⳻','┗––––––––––✦','┗━═┅═━––––––๑\n','』––––––','┗┅────────┅✦\n','┗──┅───────┅๑\n']
-let hbwh = bwh[Math.floor(Math.random() * bwh.length)]
-let kna = ['』┅────┅','』––––––','❩ ━━┄┈ •⟅']
-let hkna = kna[Math.floor(Math.random() * kna.length)]
-let ttk = ['✦','⛶','❏','⫹⫺','◈▻','➭']
-let httk = ttk[Math.floor(Math.random() * ttk.length)]
-
 /*Oᴡɴᴇʀ number*/
 global.owner = [
   ['6282195322106', '️One', true],
@@ -148,29 +137,10 @@ global.fsizedoc = '1'.repeat(10)
 global.fpagedoc = '1'.repeat(10)
 global.thumbdoc = 'https://telegra.ph/file/6e45318d7c76f57e4a8bd.jpg'
 
-
-/*Hiasan*/
-global.dmenut = hats
-global.dmenub = hkri
-global.dmenub2 = dmenub
-global.dmenuf = hbwh
-
-/*Hiasan*/
-global.cmenut = dmenut
-global.cmenuh = hkna
-global.cmenub = dmenub
-global.cmenuf = dmenuf
-global.cmenua = '\n⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕\n     '
-global.pmenus = httk
-global.dashmenu = dmenut + ' *𝐃𝐀𝐒𝐇𝐁𝐎𝐀𝐑𝐃* ' + cmenuh
-
-global.htki = dmenut
-global.htka = cmenuh
+/*Watermark*/
 global.lopr = '🅟'
 global.lolm = 'Ⓛ'
-global.htjava = pmenus
-
-/*Watermark*/
+global.cmenua = '\n⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕\n     '
 global.stickpack = cmenua
 global.stickauth = `☂︎ 𝗛𝗶𝗻𝗮𝘁𝗮 乂 𝘄𝘂𝗱𝘆𝘀𝗼𝗳𝘁\n⫹⫺ 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩\nwa.me/${global.nomorbot}`
 global.packname = '☂︎ ᴄʀᴇᴀᴛᴇᴅ ʙʏ'

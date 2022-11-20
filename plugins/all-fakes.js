@@ -92,21 +92,22 @@ export async function before(m, { conn }) {
 		global.ucapan = ucapkan()
 		global.ephemeral = '86400'
 		
-		// Fake adReply
+ // Fake adReply
 		global.adReply = {
 		fileLength: fsizedoc, seconds: fsizedoc,
 			contextInfo: {
 				forwardingScore: fsizedoc,
 				externalAdReply: {
-					showAdAttribution: true,
-					renderLargerThumbnail: true,
-					title: author,
-					body: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
-					mediaUrl: sgc,
-					description: botdate,
-					previewType: 'PHOTO',
-					thumbnail: await(await fetch(pp)).buffer(),
-					sourceUrl: sgh
+						showAdAttribution: true,
+						renderLargerThumbnail: true,
+						containsAutoReply: true,
+						title: author,
+						body: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
+						mediaUrl: sgc,
+						description: botdate,
+						previewType: 'PHOTO',
+						thumbnail: await(await fetch(pp)).buffer(),
+						sourceUrl: sgh
 				}
 			}
 		}
@@ -116,6 +117,7 @@ export async function before(m, { conn }) {
 					externalAdReply: {
 						showAdAttribution: true,
 						renderLargerThumbnail: true,
+						containsAutoReply: true,
 						mediaUrl: sig,
 						mediaType: 'VIDEO',
 						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + sig,
@@ -132,6 +134,7 @@ export async function before(m, { conn }) {
 					externalAdReply: {
 						showAdAttribution: true,
 						renderLargerThumbnail: true,
+						containsAutoReply: true,
 						mediaUrl: sfb,
 						mediaType: 'VIDEO',
 						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + sfb,
@@ -148,6 +151,7 @@ export async function before(m, { conn }) {
 					externalAdReply: {
 						showAdAttribution: true,
 						renderLargerThumbnail: true,
+						containsAutoReply: true,
 						mediaUrl: snh,
 						mediaType: 'VIDEO',
 						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + snh,
@@ -164,6 +168,7 @@ export async function before(m, { conn }) {
 					externalAdReply: {
 						showAdAttribution: true,
 						renderLargerThumbnail: true,
+						containsAutoReply: true,
 						mediaUrl: syt,
 						mediaType: 'VIDEO',
 						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + syt,

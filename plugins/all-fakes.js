@@ -18,8 +18,10 @@ export async function before(m, { conn }) {
 /*Thumbnail*/
 		let gh = 'https://raw.githubusercontent.com/AyGemuy/RestApi/master/data/'
 		let aa = await fetch(gh + 'waifu.json')
+		let wangfu = await aa.json()
 		let bb = await fetch(gh + 'Mountain.json')
 		let cc = await fetch(gh + 'GameWallp.json')
+		let gmwall = await cc.json()
 		let dd = await fetch(gh + 'cosplay.json')
 		let ee = await fetch(gh + 'loli.json')
 		let ff = await fetch(gh + 'yuri.json')
@@ -38,12 +40,10 @@ export async function before(m, { conn }) {
 		
 	let sapa = ['Hai', 'Ohayo', 'Kyaa', 'Halo', 'Nyann'].getRandom()
 	let curr = ['AED','AFN','ALL','AMD','ANG','AOA','ARS','AUD','AWG','AZN','BAM','BBD','BDT','BGN','BHD','BIF','BMD','BND','BOB','BOV','BRL','BSD','BTN','BWP','BYR','BZD','CAD','CDF','CHE','CHF','CHW','CLF','CLP','CNY','COP','COU','CRC','CUC','CUP','CVE','CZK','DJF','DKK','DOP','DZD','EGP','ERN','ETB','EUR','FJD','FKP','GBP','GEL','GHS','GIP','GMD','GNF','GTQ','GYD','HKD','HNL','HRK','HTG','HUF','IDR','ILS','INR','IQD','IRR','ISK','JMD','JOD','JPY','KES','KGS','KHR','KMF','KPW','KRW','KWD','KYD','KZT','LAK','LBP','LKR','LRD','LSL','LTL','LVL','LYD','MAD','MDL','MGA','MKD','MMK','MNT','MOP','MRO','MUR','MVR','MWK','MXN','MXV','MYR','MZN','NAD','NGN','NIO','NOK','NPR','NZD','OMR','PAB','PEN','PGK','PHP','PKR','PLN','PYG','QAR','RON','RSD','RUB','RWF','SAR','SBD','SCR','SDG','SEK','SGD','SHP','SLL','SOS','SRD','SSP','STD','SYP','SZL','THB','TJS','TMT','TND','TOP','TRY','TTD','TWD','TZS','UAH','UGX','USD','USN','USS','UYI','UYU','UZS','VEF','VND','VUV','WST','XAF','XAG','XAU','XBA','XBB','XBC','XBD','XCD','XDR','XFU','XOF','XPD','XPF','XPT','XTS','XXX','YER','ZAR','ZMW'].getRandom()
-	let wasifu = await aa.json()
-	let pp = await conn.profilePictureUrl(who, 'image').catch(_ => wasifu.getRandom())
+	let pp = await conn.profilePictureUrl(who, 'image').catch(_ => wangfu.getRandom())
 	
     // jpegThumbnail
-    let thumnel = await cc.json()
-    let _situm = await conn.resize(thumnel.getRandom(), 300, 150)
+    let _situm = await conn.resize(gmwall.getRandom(), 300, 150)
     let sipp = await conn.resize(pp, 150, 150)
     
     // Fake Knights
@@ -73,9 +73,9 @@ export async function before(m, { conn }) {
 		global.htjava = pmenus
 
 /*Thumbnail*/
-		global.hwaifu = await aa.json()
+		global.hwaifu = wangfu
 		global.hbeach = await bb.json()
-		global.thumbnailUrl = await cc.json()
+		global.thumbnailUrl = gmwall
 		global.hoppai = await dd.json()
 		global.hloli = await ee.json()
 		global.hyuri = await ff.json()

@@ -104,7 +104,7 @@ global.titlebot = `⫹⫺ Time Sever : ${moment.tz('Asia/Jakarta').format('HH:mm
 
 /*Thumbnail*/
 global.giflogo = 'https://telegra.ph/file/a46ab7fa39338b1f54d5a.mp4'
-global.fla='https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
+global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 global.flaaa = [
 'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
 'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&text=',
@@ -133,17 +133,17 @@ global.dpdf = 'application/pdf'
 global.drtf = 'text/rtf'
 
 /*Fake*/
-global.fsizedoc = '1'.repeat(10)
-global.fpagedoc = '1'.repeat(10)
+global.fsizedoc = '9'.repeat(9)
+global.fpagedoc = '9'.repeat(3)
 
 /*Watermark*/
 global.lopr = '🅟'
 global.lolm = 'Ⓛ'
 global.cmenua = '\n⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕\n     '
-global.stickauth = `☂︎ 𝗛𝗶𝗻𝗮𝘁𝗮 乂 𝘄𝘂𝗱𝘆𝘀𝗼𝗳𝘁\n⫹⫺ W H A T S A P P\nwa.me/${global.nomorbot}`
-global.packname = 'ᴄ ʀ ᴇ ᴀ ᴛ ᴇ ᴅ :\n' + bottime + '\n' + stickauth
+global.packname = 'ᴍᴀᴅᴇ ʙʏ'
 global.stickpack = packname
 global.author = '𝗛𝗶𝗻𝗮𝘁𝗮 乂 𝘄𝘂𝗱𝘆𝘀𝗼𝗳𝘁'
+global.stickauth = author + '\nwa.me/' + nomorbot
 global.multiplier = 10
 
 /*Pesan*/

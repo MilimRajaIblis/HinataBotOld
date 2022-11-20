@@ -4,27 +4,10 @@ import fetch from 'node-fetch'
 import moment from 'moment-timezone'
 import knights from 'knights-canvas'
 export async function before(m, { conn }) {
-let who = m.sender ? m.sender : conn.user.jid && conn.user.jid ? conn.user.jid : '0@s.whatsapp.net'
-	let name = await conn.getName(who)
-	let sapa = ['Hai', 'Ohayo', 'Kyaa', 'Halo', 'Nyann'].getRandom()
-	let curr = ['AED','AFN','ALL','AMD','ANG','AOA','ARS','AUD','AWG','AZN','BAM','BBD','BDT','BGN','BHD','BIF','BMD','BND','BOB','BOV','BRL','BSD','BTN','BWP','BYR','BZD','CAD','CDF','CHE','CHF','CHW','CLF','CLP','CNY','COP','COU','CRC','CUC','CUP','CVE','CZK','DJF','DKK','DOP','DZD','EGP','ERN','ETB','EUR','FJD','FKP','GBP','GEL','GHS','GIP','GMD','GNF','GTQ','GYD','HKD','HNL','HRK','HTG','HUF','IDR','ILS','INR','IQD','IRR','ISK','JMD','JOD','JPY','KES','KGS','KHR','KMF','KPW','KRW','KWD','KYD','KZT','LAK','LBP','LKR','LRD','LSL','LTL','LVL','LYD','MAD','MDL','MGA','MKD','MMK','MNT','MOP','MRO','MUR','MVR','MWK','MXN','MXV','MYR','MZN','NAD','NGN','NIO','NOK','NPR','NZD','OMR','PAB','PEN','PGK','PHP','PKR','PLN','PYG','QAR','RON','RSD','RUB','RWF','SAR','SBD','SCR','SDG','SEK','SGD','SHP','SLL','SOS','SRD','SSP','STD','SYP','SZL','THB','TJS','TMT','TND','TOP','TRY','TTD','TWD','TZS','UAH','UGX','USD','USN','USS','UYI','UYU','UZS','VEF','VND','VUV','WST','XAF','XAG','XAU','XBA','XBB','XBC','XBD','XCD','XDR','XFU','XOF','XPD','XPF','XPT','XTS','XXX','YER','ZAR','ZMW'].getRandom()
-	let pp = await conn.profilePictureUrl(who, 'image').catch(_ => hwaifu.getRandom())
 	
-    // jpegThumbnail
-    let _situm = await conn.resize(thumbnailUrl.getRandom(), 300, 150)
-    let sipp = await conn.resize(pp, 150, 150)
-    
-    // Fake Knights
-		let imagea = await new knights.Jo().setImage(pp).toBuild();
-		let dataa = imagea.toBuffer();
-		let imageb = await new knights.Patrick().setAvatar(pp).toAttachment();
-		let datab = imageb.toBuffer();
-		let imagec = await new knights.Bonk().setAvatar1(pp).setAvatar2(pp).toBuild();
-		let datac = imagec.toBuffer();
-		let imaged = await new knights.Burn().setAvatar(pp).toAttachment();
-		let datad = imaged.toBuffer();
-		let _kn = [dataa, datab, datac, datad].getRandom()
-		
+	let who = m.sender ? m.sender : conn.user.jid && conn.user.jid ? conn.user.jid : '0@s.whatsapp.net'
+	let name = await conn.getName(who)
+	
 /*Hiasan*/
 		let hats =  ['┅────┅『','❏┅────┅『','❏─┅──┅〈','☰ ━━━ ❨','ଓ═┅═━–〈','❩ ━━┄┈ •⟅','❏––––––『','––––––『'].getRandom()
 		let hkri =  ['┊•','┃','┊↬','┊','┊✦ '].getRandom()
@@ -48,6 +31,31 @@ let who = m.sender ? m.sender : conn.user.jid && conn.user.jid ? conn.user.jid :
 		let rkk = await kk.json()
 		let ll = await fetch(gh + 'kucing.json')
 		let rll = await ll.json()
+		let mm = await fetch(gh + 'naruto.json')
+		let rmm = await mm.json()
+		let nn = await fetch(gh + 'CyberSpace.json')
+		let rnn = await nn.json()
+		
+	let sapa = ['Hai', 'Ohayo', 'Kyaa', 'Halo', 'Nyann'].getRandom()
+	let curr = ['AED','AFN','ALL','AMD','ANG','AOA','ARS','AUD','AWG','AZN','BAM','BBD','BDT','BGN','BHD','BIF','BMD','BND','BOB','BOV','BRL','BSD','BTN','BWP','BYR','BZD','CAD','CDF','CHE','CHF','CHW','CLF','CLP','CNY','COP','COU','CRC','CUC','CUP','CVE','CZK','DJF','DKK','DOP','DZD','EGP','ERN','ETB','EUR','FJD','FKP','GBP','GEL','GHS','GIP','GMD','GNF','GTQ','GYD','HKD','HNL','HRK','HTG','HUF','IDR','ILS','INR','IQD','IRR','ISK','JMD','JOD','JPY','KES','KGS','KHR','KMF','KPW','KRW','KWD','KYD','KZT','LAK','LBP','LKR','LRD','LSL','LTL','LVL','LYD','MAD','MDL','MGA','MKD','MMK','MNT','MOP','MRO','MUR','MVR','MWK','MXN','MXV','MYR','MZN','NAD','NGN','NIO','NOK','NPR','NZD','OMR','PAB','PEN','PGK','PHP','PKR','PLN','PYG','QAR','RON','RSD','RUB','RWF','SAR','SBD','SCR','SDG','SEK','SGD','SHP','SLL','SOS','SRD','SSP','STD','SYP','SZL','THB','TJS','TMT','TND','TOP','TRY','TTD','TWD','TZS','UAH','UGX','USD','USN','USS','UYI','UYU','UZS','VEF','VND','VUV','WST','XAF','XAG','XAU','XBA','XBB','XBC','XBD','XCD','XDR','XFU','XOF','XPD','XPF','XPT','XTS','XXX','YER','ZAR','ZMW'].getRandom()
+	let wasifu = await aa.json()
+	let pp = await conn.profilePictureUrl(who, 'image').catch(_ => wasifu.getRandom())
+	
+    // jpegThumbnail
+    let thumnel = await cc.json()
+    let _situm = await conn.resize(thumnel.getRandom(), 300, 150)
+    let sipp = await conn.resize(pp, 150, 150)
+    
+    // Fake Knights
+		let imagea = await new knights.Jo().setImage(pp).toBuild();
+		let dataa = imagea.toBuffer();
+		let imageb = await new knights.Patrick().setAvatar(pp).toAttachment();
+		let datab = imageb.toBuffer();
+		let imagec = await new knights.Bonk().setAvatar1(pp).setAvatar2(pp).toBuild();
+		let datac = imagec.toBuffer();
+		let imaged = await new knights.Burn().setAvatar(pp).toAttachment();
+		let datad = imaged.toBuffer();
+		let _kn = [dataa, datab, datac, datad].getRandom()
 		
 /*Hiasan*/
 		global.dmenut = hats
@@ -77,6 +85,8 @@ let who = m.sender ? m.sender : conn.user.jid && conn.user.jid ? conn.user.jid :
 		global.thumbs = await jj.json()
 		global.thumb = rkk.getRandom()
 		global.imagebot = rll.getRandom()
+		global.thumbdoc = rnn.getRandom()
+		global.logo = rmm.getRandom()
 
 	// Begin
 		global.ucapan = ucapkan()

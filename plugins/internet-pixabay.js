@@ -86,7 +86,7 @@ let sul = await res.json()
 	return conn.sendList(m.chat, htki + ' 📺 Pixabay Search 🔎 ' + htka, `⚡ Total ${sul.total_count} Code, Silakan pilih Pixabay Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Pixabay Search Disini ☂️`, listSections, m)
 	}
     }
-handler.help = ['pixabay']
+handler.help = ['piximg','pixvid']
 handler.tags = ['internet']
 handler.command = /^(piximg|pixvid)$/i
 

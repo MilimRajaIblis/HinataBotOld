@@ -9,7 +9,7 @@ export async function before(m, { conn }) {
 	let name = await conn.getName(who)
 	
 	/* Hiasan */
-		let ini_titik = ['✦','⛶','❏','⫹⫺','◈','➭','☰','ଓ','⟆•','⳻⳻','•','↬'].getRandom()
+		let ini_titik = ['⛶','❏','⫹⫺','◈','➭','☰','ଓ','⟆•','⳻⳻','•','↬','⎔','◈▻','✦','⭑','ᯬ','⭔','◉','⬟','᭻','»','〆','々','⛥','✗','⛊','⚜','⚝','⚚','♪'].getRandom()
 		let ini_garis = ['┅──┅','━━━','═┅┅═','––––','–━═━–','──┅──','═┅┅┅═','┈┅━┅┈','┈┄═┅═┄┈','┅══┅'].getRandom()
 		let ini_panjang = ['┅──┅┅──┅','━━━━━━','═┅┅══┅┅═','––––––––','–━═━––━═━–','──┅────┅──','═┅┅┅══┅┅┅═','┈┅━┅┈┈┅━┅┈','┈┄═┅═┄┈┈┄═┅═┄┈','┅══┅┅══┅'].getRandom()
 		let ini_L = ['┗','└','┕','╚','╘','╙','╰'].getRandom()
@@ -97,7 +97,7 @@ export async function before(m, { conn }) {
 		global.ephemeral = '86400'
 		
 		/* Fake adReply */
-		global.adReply = {
+		global.adReplyS = {
 		fileLength: fsizedoc, seconds: fsizedoc,
 			contextInfo: {
 				forwardingScore: fsizedoc,
@@ -113,7 +113,7 @@ export async function before(m, { conn }) {
 				}
 			}
 		}
-		global.adReplyL = {
+		global.adReply = {
 		fileLength: fsizedoc, seconds: fsizedoc,
 			contextInfo: {
 				forwardingScore: fsizedoc,
